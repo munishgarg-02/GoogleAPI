@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>INTRO PAGE</title>
+        <style>
+            body{
+                background-color: black;
+            }
+            div{
+                color: yellow;
+                font-weight: bolder;
+                font-size: xx-large;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            textarea{
+                border: solid blueviolet 3px;
+            }
+            form{
+                margin-left: 550px;
+            }
+            button{
+                margin-left: 100px;
+            }
+            span{
+                font-weight: bold;
+                font-size: xx-large;
+                color: white;
+            }
+            button{
+                transform: scale(1.5);
+                border-radius: 5px;
+                margin-left: 150px;
+            }
+        </style>
+    </head>
+    <body>
+        <div align="center"><u>WELCOME TO THE VOICE API!!</u></div><br><br><br>
+        <form method="POST">
+            {% csrf_token %}
+            {% for x in form %}
+            <span>{{x.name}}</span> : {{x}}
+            {% endfor %}
+            <br><br>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </body>
+</html>
